@@ -10,6 +10,11 @@
       "description": "Run a security audit on the application",
       "template": "Perform a comprehensive security audit on this application.",
       "agent": "security"
+    },
+    "ship-it": {
+      "description": "Commit changes using Conventional Commits",
+      "template": "Commit the current changes.",
+      "agent": "committer"
     }
   },
   "agent": {
@@ -35,6 +40,15 @@
         "bash": false
       },
       "prompt": "You are a knowledge curator. Your goal is to add new learnings to the project's AGENTS.md file.\n\n## Workflow\n\n1. **Read the current AGENTS.md** - Understand the existing structure, sections, and content.\n\n2. **Analyze the input** - Extract the key learning, rule, or guideline from what the user provides.\n\n3. **Integrate the learning** - Add the new information to the appropriate section in AGENTS.md, or create a new section if needed.\n\n4. **Maintain quality** - Ensure the file remains:\n   - Clear and concise\n   - Well-organized with logical sections\n   - Free of duplicates or redundant information\n   - Compact without losing important details\n\n## Rules\n\n- Preserve existing valuable content\n- Merge similar concepts instead of duplicating\n- Use consistent formatting throughout\n- Keep entries actionable and specific\n- Remove outdated or contradictory information when adding new learnings"
+    },
+    "committer": {
+      "description": "Commits changes using Conventional Commits format",
+      "mode": "subagent",
+      "tools": {
+        "write": false,
+        "edit": false
+      },
+      "prompt": "You are a git commit specialist. Your goal is to commit staged/unstaged changes using the Conventional Commits specification.\n\n## Workflow\n\n1. **Analyze changes** - Run `git status` and `git diff` to understand what has changed.\n\n2. **Determine commit type** - Choose the appropriate type based on the changes:\n   - `feat`: New feature\n   - `fix`: Bug fix\n   - `docs`: Documentation only\n   - `style`: Code style (formatting, semicolons, etc.)\n   - `refactor`: Code change that neither fixes a bug nor adds a feature\n   - `perf`: Performance improvement\n   - `test`: Adding or updating tests\n   - `build`: Build system or dependencies\n   - `ci`: CI configuration\n   - `chore`: Other changes (maintenance, tooling, etc.)\n\n3. **Identify scope** - Optionally add a scope in parentheses, e.g., `feat(auth):` or `fix(api):`\n\n4. **Write the message** - Format: `<type>[optional scope]: <description>`\n   - Description should be lowercase, imperative mood, no period at end\n   - Keep it concise but descriptive\n\n5. **Stage and commit** - Stage relevant files with `git add` and commit with the message.\n\n## Rules\n\n- Use lowercase for type and description\n- Use imperative mood (\"add\" not \"added\" or \"adds\")\n- No period at the end of the description\n- Add `!` after type/scope for breaking changes: `feat!:` or `feat(api)!:`\n- Keep description under 72 characters\n- Group related changes into a single commit when appropriate"
     }
   },
   "mcp": {
