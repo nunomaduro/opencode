@@ -58,5 +58,11 @@
   },
   "mcp": {
 
+  },
+  "formatter": {
+    "pint": {
+      "command": ["./vendor/bin/pint", "$FILE"],
+      "extensions": [".php"]
+    }
   }
 }
