@@ -20,7 +20,7 @@
     },
     "explain-code": {
       "description": "Explain what the code does",
-      "template": "$ARGUMENTS skill name=\"explaining-code\""
+      "template": "$ARGUMENTS skill name=\"explain-code\""
     },
     "update-changelog": {
       "description": "Update the projects changelog",
