@@ -31,7 +31,8 @@ Manage the changelog:
     - Translate technical changes into user-friendly descriptions
     - Identify breaking changes, new features, bug fixes, etc.
     - Group related commits into single changelog entries
-    - Always credit the contributor(s) for their each changes at the end of each changelog entry. Use the format `by @username`
+    - Always credit the contributor(s) for their each changes at the end of each changelog entry. Use the format `by [@username](https://github.com/@username)`
+    - If relevant, add a link after the contributor to the pull request or issue that introduced the change. Use the format `in [#PR-number](https://github.com/org/repo/pull/PR-number)` or `in [#Issue-number](https://github.com/org/repo/issues/Issue-number)`
     - Focus on "why it matters" not "what code changed"
     - Use present tense
 
