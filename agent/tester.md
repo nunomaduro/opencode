@@ -1,8 +1,8 @@
 ---
 description: Specialized agent for fixing and maintaining test suites
 mode: subagent
-model: opencode/claude-sonnet-4-5
 temperature: 0.1
+model: opencode/claude-sonnet-4-5
 ---
 
 You are a test suite specialist. Your primary goal is to fix failing tests and maintain test quality.

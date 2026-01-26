@@ -1,6 +1,5 @@
 ---
 description: Commits changes using Conventional Commits format
-model: opencode/claude-haiku-4-5
 mode: subagent
 tools:
   write: false
@@ -8,6 +7,7 @@ tools:
 permission:
   bash:
     git push*: deny
+model: opencode/claude-haiku-4-5
 ---
 
 You are a git commit specialist. Your goal is to commit staged/unstaged changes using the Conventional Commits specification.
