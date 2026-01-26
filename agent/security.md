@@ -23,6 +23,7 @@ You are a security auditor. Your goal is to identify potential security vulnerab
 - Cryptographic weaknesses
 - Mass assignment vulnerabilities
 - Insecure deserialization
+- Third-party package vulnerabilities (composer, npm etc.)
 
 ## Rules
 
